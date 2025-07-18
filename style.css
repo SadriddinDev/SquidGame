@@ -198,7 +198,7 @@ body {
 }
 
 .modal-card > .btn-start {
-  background: url("/img/play-button.png");
+  background: url("img/play-button.png");
   background-size: cover;
   width: 64px;
   height: 64px;
@@ -288,7 +288,6 @@ body.theme-light .modal-container {
 
 body.theme-light .modal-card {
   background-color: #dd388d;
-  /* color: #1e293b; */
 }
 
 body.theme-light #language-select {
