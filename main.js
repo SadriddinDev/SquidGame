@@ -3,7 +3,14 @@ import GameController from "./modules/GameController.js";
 import { applyTranslations } from "./modules/i18n.js";
 import ThemeToggle from "./modules/theme-toggle.js";
 
+function setRealViewportHeight() {
+  document.documentElement.style.setProperty('--vh', `${window.innerHeight * 0.01}px`);
+}
+
+
 document.addEventListener("DOMContentLoaded", () => {
+  setRealViewportHeight();
+
   const game = new GameController();
   game.init();
 

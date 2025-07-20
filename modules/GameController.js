@@ -51,9 +51,7 @@ export default class GameController {
     this.sounds.shot.preload = "auto";
     this.sounds.shot.volume = 1.0;
     this.sounds.shot.currentTime = 0;
-
-    this.maxDistance = this.container.offsetHeight - 180;
-    this.calculateRefreshRate();
+    this.onResize();
   }
 
   init() {
