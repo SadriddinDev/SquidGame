@@ -3,7 +3,7 @@ export default class Player {
     this.el = playerElement;
     this.container = containerElement;
     this.speed = 1;
-    this.initialBottom = 100;
+    this.initialBottom = 180;
     this.width = 50;
     this.resetPosition();
   }

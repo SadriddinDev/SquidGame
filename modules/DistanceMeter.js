@@ -2,16 +2,17 @@ export default class DistanceMeter {
   constructor(labelElement, containerElement) {
     this.el = labelElement;
     this.container = containerElement;
-    this.initialHeight = this.container.offsetHeight - 280;
+    this.initialHeight = this.container.offsetHeight - 360;
     this.el.style.height = `${this.initialHeight}px`;
+    this.playerBottom = 180;
     this.updateLabel(100);
   }
 
   update(currentBottom, maxDistance) {
-    const usedDistance = currentBottom - 100;
+    const usedDistance = currentBottom - this.playerBottom;
     const newHeight = Math.max(this.initialHeight - usedDistance, 0);
     this.el.style.height = `${newHeight}px`;
-    const metersLeft = (newHeight / (maxDistance - 100)) * 100;
+    const metersLeft = (newHeight / (maxDistance - this.playerBottom)) * 100;
     this.updateLabel(metersLeft);
   }
 
@@ -33,7 +34,7 @@ export default class DistanceMeter {
   }
 
   resize() {
-    this.initialHeight = this.container.offsetHeight - 280;
+    this.initialHeight = this.container.offsetHeight - 360;
     this.el.style.height = `${this.initialHeight}px`;
   }
 }

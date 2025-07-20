@@ -94,7 +94,7 @@ body {
 
 .control-buttons {
   position: absolute;
-  bottom: 20px;
+  bottom: 80px;
   width: 100%;
   display: flex;
   justify-content: center;

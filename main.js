@@ -7,7 +7,6 @@ function setRealViewportHeight() {
   document.documentElement.style.setProperty('--vh', `${window.innerHeight * 0.01}px`);
 }
 
-
 document.addEventListener("DOMContentLoaded", () => {
   setRealViewportHeight();
 
